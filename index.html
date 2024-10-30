@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YT Downloader</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Baixar Vídeo do YouTube</h1>
-    <input type="text" id="videoUrl" placeholder="Cole a URL do vídeo">
-    <button onclick="downloadVideo()">Baixar</button>
-    
+    <div class="container">
+        <h1>Baixar Vídeo/Áudio do YouTube</h1>
+        <input type="text" id="videoUrl" placeholder="Cole a URL do vídeo" />
+
+        <select id="format">
+            <option value="video">Vídeo</option>
+            <option value="audio">Áudio</option>
+        </select>
+
+        <select id="quality">
+            <option value="highest">Alta Qualidade</option>
+            <option value="medium">Média Qualidade</option>
+            <option value="lowest">Baixa Qualidade</option>
+        </select>
+
+        <button onclick="download()">Baixar</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
